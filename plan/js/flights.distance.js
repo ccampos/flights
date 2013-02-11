@@ -21,20 +21,28 @@ function getDistance(dep, arr) {
 
 	// ******* 'haversine' formula *******
 	// to calculate the great-circle distance between two points
-	distLat = (lat2 - lat1).toRad();
-	distLon = (lon2 - lon1).toRad();
-	distLat1 = lat1.toRad();
-	distLat2 = lat2.toRad();
+	distLat = toRad(lat2 - lat1);
+	distLon = toRad(lon2 - lon1);
+	distLat1 = toRad(lat1);
+	distLat2 = toRad(lat2);
 
 	// square of half the chord length between the points
-	sqChord = Math.sin(distLat / 2) * Math.sin(distLat / 2) + Math.sin(distLon / 2) * Math.sin(distLon / 2) * Math.cos(distLat1) * Math.cos(distLat2);
-
+	sqChord = Math.sin(distLat / 2) * Math.sin(distLat / 2) +
+	        Math.sin(distLon / 2) * Math.sin(distLon / 2) * Math.cos(distLat1) * Math.cos(distLat2);
 	// angular distance in radians
 	angDist = 2 * Math.atan2(Math.sqrt(sqChord), Math.sqrt(1 - sqChord));
 
 	distance = Math.round(earthRadius * angDist);
 
 	return distance;
+
+	/**
+	* Converts numeric degrees to radians
+	* @return radians
+	*/
+	function toRad(number) {
+		return number * Math.PI / 180;
+	}
 };
 
 /**
