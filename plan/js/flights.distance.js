@@ -28,7 +28,8 @@ function getDistance(dep, arr) {
 
 	// square of half the chord length between the points
 	sqChord = Math.sin(distLat / 2) * Math.sin(distLat / 2) +
-	        Math.sin(distLon / 2) * Math.sin(distLon / 2) * Math.cos(distLat1) * Math.cos(distLat2);
+		Math.sin(distLon / 2) * Math.sin(distLon / 2) *
+		Math.cos(distLat1) * Math.cos(distLat2);
 	// angular distance in radians
 	angDist = 2 * Math.atan2(Math.sqrt(sqChord), Math.sqrt(1 - sqChord));
 
