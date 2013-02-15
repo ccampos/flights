@@ -103,36 +103,3 @@ define(function() {
 		aircraft: aircraft
 	};
 });
-
-
-
-
-
-
-/*{
-	cargo_capacity: ,
-	cockpit_crew: ,
-	fuel_capacity: ,
-	model: '',
-	seating: {
-		capacity: {
-			class_1: {
-				max: ,
-				typical: 
-			},
-			class_2: 
-		}
-	},
-	speed: {
-		cruise: ,
-		max: 
-	},
-	range: ,
-	service_altitude: ,
-	service_ceiling: ,
-	takeoff_run: ,
-	thrust: {
-		min: ,
-		max: 
-	}
-}*/

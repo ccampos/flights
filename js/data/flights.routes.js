@@ -1,13 +1,20 @@
 define([
 	'data/flights.locations',
-	'util/flights.util.random'
-], function(Locations, Util) {
+	'util/flights.util.distance',
+	'util/flights.util.random',
+	'util/flights.util.time'
+], function(Locations, UtilDist, UtilRand, UtilTime) {
 	var locations = Locations.locations,
 		locations_length = locations.length,
-		rand1 = Util.getRandom(0, locations_length),
-		rand2 = Util.getRandom(0, locations_length),
+		rand1 = UtilRand.getRandom(0, locations_length),
+		rand2 = UtilRand.getRandom(0, locations_length),
 		locDep = locations[rand1],
 		locArr = locations[rand2],
+		coord1 = UtilDist.getCoord(locDep),
+		coord2 = UtilDist.getCoord(locArr),
+		distance = UtilDist.getDistance(coord1, coord2),
+		duration = UtilTime.getDuration(distance, 828),
+		hrsMins = UtilTime.getHrsMins(duration),
 		route = {
 			departure: {
 				city: locDep.city,
@@ -18,6 +25,12 @@ define([
 				city: locArr.city,
 				coord: locArr.coord,
 				country: locArr.country
+			},
+			distance: distance,
+			duration: duration,
+			durHrsMins: {
+				hours: hrsMins.hours,
+				minutes: hrsMins.minutes
 			}
 		};
 

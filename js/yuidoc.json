@@ -1,0 +1,9 @@
+{
+    "name": "Flights API",
+    "description": "A library for managing flights",
+    "version": "1.1.1",
+    "url": "http://example.com/",
+    "options": {
+        "outdir": "../build/apidocs"
+    }
+}
