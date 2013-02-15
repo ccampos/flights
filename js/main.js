@@ -6,11 +6,11 @@ $(document).ready(function() {
 	});
 
 	require([
-	  // Load our app module and pass it to our definition function
-	  'app'
+		// Load our app module and pass it to our definition function
+		'app'
 	], function(App) {
-	  // The "app" dependency is passed in as "App"
-	  App.initialize();
-	  App.loadFlightModules();
+		// The "app" dependency is passed in as "App"
+	 	App.initialize();
+	 	App.loadFlightModules();
 	});
 });
