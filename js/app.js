@@ -11,10 +11,10 @@ define([
 	};
 
 	var loadFlightModules = function() {
-		console.log(Aircraft.aircraft);
-		console.log(Flights.flights);
-		console.log(Locations.locations);
-		console.log(Routes.route);
+		console.log('Aircraft', Aircraft.aircraft);
+		console.log('Flights', Flights.flights);
+		console.log('Locations', Locations.locations);
+		console.log('Routes', Routes.route);
 	};
 
 	return {

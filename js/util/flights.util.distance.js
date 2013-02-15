@@ -86,8 +86,6 @@ define(function() {
 		if ($.isEmptyObject(coord)) {
 			console.error('No coordinates found for', city);
 		} else {
-			console.warn('remove');
-			console.log(city);
 			return coord;
 		};
 	};
