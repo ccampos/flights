@@ -1,9 +1,10 @@
 define([
+	'data/flights.aircraft',
 	'data/flights.locations',
 	'util/flights.util.distance',
 	'util/flights.util.random',
 	'util/flights.util.time'
-], function(Locations, UtilDist, UtilRand, UtilTime) {
+], function(Aircraft, Locations, UtilDist, UtilRand, UtilTime) {
 	var locations = Locations.locations,
 		locations_length = locations.length,
 		rand1 = UtilRand.getRandom(0, locations_length),
@@ -13,7 +14,8 @@ define([
 		coord1 = UtilDist.getCoord(locDep),
 		coord2 = UtilDist.getCoord(locArr),
 		distance = UtilDist.getDistance(coord1, coord2),
-		duration = UtilTime.getDuration(distance, 828),
+		speed = Aircraft.aircraft.jetliners.boeing[0].speed.cruise,
+		duration = UtilTime.getDuration(distance, speed),
 		hrsMins = UtilTime.getHrsMins(duration),
 		route = {
 			departure: {
