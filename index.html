@@ -5,8 +5,14 @@
     <link href='css/reset.css' rel='stylesheet' />
     <link href='css/design.css' rel='stylesheet' />
     <script data-main='js/main' src='js/libs/require/require.js'></script>
+    <!-- underscore templates -->
+    <script id='aircraft_template' type='text/template'>
+      <label><%= jetliner %></label>
+      <button>Fly</button>
+    </script>
   </head>
   <body>
+    <div id='aircraftView'></div>
     <script src='js/libs/jquery/jquery.js'></script>
     <script src='js/libs/underscore/underscore.js'></script>
     <script src='js/libs/backbone/backbone.js'></script>

@@ -6,7 +6,14 @@
 		%link{ :href => 'css/design.css', :rel => 'stylesheet' }
 		%script{ :'data-main' => 'js/main', :src => 'js/libs/require/require.js' }
 
+		/ underscore templates
+		%script{ :id => 'aircraft_template', :type => 'text/template'}
+			%label <%= jetliner %>
+			%button Fly
+
 	%body
+		#aircraftView
+
 		%script{ :src => 'js/libs/jquery/jquery.js'}
 		%script{ :src => 'js/libs/underscore/underscore.js'}
 		%script{ :src => 'js/libs/backbone/backbone.js'}
