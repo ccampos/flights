@@ -7,9 +7,14 @@
 		%script{ :'data-main' => 'js/main', :src => 'js/libs/require/require.js' }
 
 		/ underscore templates
-		%script{ :id => 'aircraft_template', :type => 'text/template'}
-			%label <%= jetliner %>
-			%button Fly
+		%script{ :id => 'aircraft', :type => 'text/template'}
+			%img{ :src => 'http://static.tvtropes.org/pmwiki/pub/images/Hello_Kitty_Pink_2981.jpg'}
+
+			.details
+				%p <%= cargo_capacity %>
+				%p <%= fuel_capacity %>
+				%p <%= range %>
+				%p <%= speed_cruise %>
 
 	%body
 		#aircraftView

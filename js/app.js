@@ -20,7 +20,12 @@ define([
 
 		var commercialAircraftView = new AircraftViews.aircraftView({
 			el: $('#aircraftView'),
-			jetliner: 'Malaguena Airlines'
+			jetliner: 'Malaguena Airlines',
+			model: Aircraft.aircraft.jetliners.airbus[0].model,
+			cargo_capacity: Aircraft.aircraft.jetliners.airbus[0].cargo_capacity,
+			fuel_capacity: Aircraft.aircraft.jetliners.airbus[0].fuel_capacity,
+			range: Aircraft.aircraft.jetliners.airbus[0].range,
+			speed_cruise: Aircraft.aircraft.jetliners.airbus[0].speed.cruise
 		});
 
 		var commercialAircraftModel = new AircraftModels.aircraftModel({

@@ -6,9 +6,14 @@
     <link href='css/design.css' rel='stylesheet' />
     <script data-main='js/main' src='js/libs/require/require.js'></script>
     <!-- underscore templates -->
-    <script id='aircraft_template' type='text/template'>
-      <label><%= jetliner %></label>
-      <button>Fly</button>
+    <script id='aircraft' type='text/template'>
+      <img src='http://static.tvtropes.org/pmwiki/pub/images/Hello_Kitty_Pink_2981.jpg' />
+      <div class='details'>
+        <p><%= cargo_capacity %></p>
+        <p><%= fuel_capacity %></p>
+        <p><%= range %></p>
+        <p><%= speed_cruise %></p>
+      </div>
     </script>
   </head>
   <body>

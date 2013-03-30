@@ -1,0 +1,16 @@
+/*
+Aicraft View
+*/
+#aircraftView {
+  /*
+  	remove height after placing image
+  */
+  border: 1px solid;
+  width: 100%; }
+  #aircraftView img, #aircraftView .details {
+    border: 1px solid;
+    display: inline-block; }
+  #aircraftView img {
+    border-color: pink; }
+  #aircraftView .details {
+    border-color: green; }
