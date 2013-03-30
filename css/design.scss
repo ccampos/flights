@@ -2,19 +2,21 @@
 Aicraft View
 */
 #aircraftView {
-	/*
-		remove height after placing image
-	*/
-	border: 1px solid;
-	width: 100%;
-	img, .details {
-		border: 1px solid;
-		display: inline-block;
-	}
-	img {
-		border-color: pink;
+	border: 1px solid #eee;
+	display: table;
+	padding: 0.5em;
+	.airplane, .details {
+		display: table-cell;
 	}
 	.details {
-		border-color: green;
+		vertical-align: top;
+		li {
+			display: table-row;
+			label, span {
+				display: table-cell;
+				line-height: 1.3em;
+				padding: 0 0.5em;
+			}
+		}
 	}
 }

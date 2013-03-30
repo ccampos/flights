@@ -4,16 +4,11 @@ define(function() {
 			this.render();
 		},
 		render: function() {
-			var variables,
+			var variables = {},
 				template;
 
-			variables = {
-				jetliner: this.options.jetliner,
-				model: this.options.model,
-				cargo_capacity: this.options.cargo_capacity,
-				fuel_capacity: this.options.fuel_capacity,
-				range: this.options.range,
-				speed_cruise: this.options.speed_cruise
+			for ( var property in this.options ) {
+				variables[property] = this.options[property];
 			};
 
 			template = _.template( $('#aircraft').html(), variables );

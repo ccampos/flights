@@ -5,21 +5,37 @@
     <link href='css/reset.css' rel='stylesheet' />
     <link href='css/design.css' rel='stylesheet' />
     <script data-main='js/main' src='js/libs/require/require.js'></script>
+    <script src='js/libs/jquery/jquery.js'></script>
+    <script src='js/libs/underscore/underscore.js'></script>
+    <script src='js/libs/backbone/backbone.js'></script>
     <!-- underscore templates -->
     <script id='aircraft' type='text/template'>
-      <img src='http://static.tvtropes.org/pmwiki/pub/images/Hello_Kitty_Pink_2981.jpg' />
+      <div class='airplane'>
+        <img src='http://static.tvtropes.org/pmwiki/pub/images/Hello_Kitty_Pink_2981.jpg' />
+      </div>
       <div class='details'>
-        <p><%= cargo_capacity %></p>
-        <p><%= fuel_capacity %></p>
-        <p><%= range %></p>
-        <p><%= speed_cruise %></p>
+        <ul>
+          <li>
+            <label for='cargo_capacity'>Cargo Capacity</label>
+            <span id='cargo_capacity'><%= cargo_capacity %></span>
+          </li>
+          <li>
+            <label for='fuel_capacity'>Fuel Capacity</label>
+            <span id='fuel_capacity'><%= fuel_capacity %></span>
+          </li>
+          <li>
+            <label for='range'>Range</label>
+            <span id='range'><%= range %></span>
+          </li>
+          <li>
+            <label for='speed_cruise'>Cruise Speed</label>
+            <span id='speed_cruise'><%= speed_cruise %></span>
+          </li>
+        </ul>
       </div>
     </script>
   </head>
   <body>
     <div id='aircraftView'></div>
-    <script src='js/libs/jquery/jquery.js'></script>
-    <script src='js/libs/underscore/underscore.js'></script>
-    <script src='js/libs/backbone/backbone.js'></script>
   </body>
 </html>

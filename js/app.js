@@ -13,25 +13,23 @@ define([
 	};
 
 	var loadFlightModules = function() {
+		var airplane = Aircraft.aircraft.jetliners.airbus[0],
+			commercialAircraftView;
+
+		airplane.el = $('#aircraftView');
+		airplane.jetliner = 'Malagueña Airlines';
+
 		console.log('Aircraft', Aircraft.aircraft);
 		console.log('Flights', Flights.flights);
 		console.log('Locations', Locations.locations);
-		console.log('Routes', Routes.route);
+		console.log('Airplane Routes', Routes.route);
 
-		var commercialAircraftView = new AircraftViews.aircraftView({
-			el: $('#aircraftView'),
-			jetliner: 'Malaguena Airlines',
-			model: Aircraft.aircraft.jetliners.airbus[0].model,
-			cargo_capacity: Aircraft.aircraft.jetliners.airbus[0].cargo_capacity,
-			fuel_capacity: Aircraft.aircraft.jetliners.airbus[0].fuel_capacity,
-			range: Aircraft.aircraft.jetliners.airbus[0].range,
-			speed_cruise: Aircraft.aircraft.jetliners.airbus[0].speed.cruise
-		});
+		commercialAircraftView = new AircraftViews.aircraftView(airplane);
 
-		var commercialAircraftModel = new AircraftModels.aircraftModel({
-			jetliner: 'Boeing',
-			model: 'A318'
-		});
+		// var commercialAircraftModel = new AircraftModels.aircraftModel({
+		// 	jetliner: 'Boeing',
+		// 	model: 'A318'
+		// });
 
 
 	};

@@ -5,20 +5,29 @@
 		%link{ :href => 'css/reset.css', :rel => 'stylesheet' }
 		%link{ :href => 'css/design.css', :rel => 'stylesheet' }
 		%script{ :'data-main' => 'js/main', :src => 'js/libs/require/require.js' }
+		%script{ :src => 'js/libs/jquery/jquery.js' }
+		%script{ :src => 'js/libs/underscore/underscore.js' }
+		%script{ :src => 'js/libs/backbone/backbone.js' }
 
 		/ underscore templates
 		%script{ :id => 'aircraft', :type => 'text/template'}
-			%img{ :src => 'http://static.tvtropes.org/pmwiki/pub/images/Hello_Kitty_Pink_2981.jpg'}
+			.airplane
+				%img{ :src => 'http://static.tvtropes.org/pmwiki/pub/images/Hello_Kitty_Pink_2981.jpg'}
 
 			.details
-				%p <%= cargo_capacity %>
-				%p <%= fuel_capacity %>
-				%p <%= range %>
-				%p <%= speed_cruise %>
+				%ul
+					%li
+						%label{:for => 'cargo_capacity'} Cargo Capacity
+						%span#cargo_capacity <%= cargo_capacity %>
+					%li
+						%label{:for => 'fuel_capacity'} Fuel Capacity
+						%span#fuel_capacity <%= fuel_capacity %>
+					%li
+						%label{:for => 'range'} Range
+						%span#range <%= range %>
+					%li
+						%label{:for => 'speed_cruise'} Cruise Speed
+						%span#speed_cruise <%= speed_cruise %>
 
 	%body
 		#aircraftView
-
-		%script{ :src => 'js/libs/jquery/jquery.js'}
-		%script{ :src => 'js/libs/underscore/underscore.js'}
-		%script{ :src => 'js/libs/backbone/backbone.js'}

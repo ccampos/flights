@@ -19,27 +19,17 @@ define(function() {
 					cockpit_crew: 2,
 					fuel_capacity: 24210,
 					model: 'A318',
-					seating: {
-						capacity: {
-							class_1: {
-								max: 132,
-								typical: 117
-							},
-							class_2: 107
-						}
-					},
-					speed: {
-						cruise: 828,
-						max: 871
-					},
+					seating_capacity_class_1_max: 132,
+					seating_capacity_class_1_typical: 117,
+					seating_capacity_class_2: 107,
+					speed_cruise: 828,
+					speed_max: 871,
 					range: 5700,
 					service_altitude: 11000,
 					service_ceiling: 12000,
 					takeoff_run: 1828,
-					thrust: {
-						min: 96,
-						max: 106
-					}
+					thrust_min: 96,
+					thrust_max: 106,
 				},
 				{
 					cargo_capacity: 27.62,
