@@ -1,7 +1,31 @@
-/*
-Aicraft View
+/* --------------------------------------------------------------------
+************************* Modify in pos.layout.SCSS *************************
+[Table of contents]
+
+1. Body
+
+2. Mixins
+	[2.1. Linear Gradient / @mixin linearGradient]
+
+3. Views
+	3.1. Aircraft View / #aircraftView
+
+-------------------------------------------------------------------- */
+
+/*------------------------------------------------------------------
+[2.1. Linear Gradient / @mixin linearGradient]
+*/
+@mixin linearGradient($degreeAngle, $firstColor, $secondColor) {
+	background-image: -webkit-linear-gradient($degreeAngle, $firstColor, $secondColor);
+	background-image: -moz-linear-gradient($degreeAngle, $firstColor, $secondColor);
+	background-image: linear-gradient($degreeAngle, $firstColor, $secondColor);
+}
+
+/*------------------------------------------------------------------
+[3.1. Aircraft View / #aircraftView]
 */
 #aircraftView {
+	@include linearGradient(0deg, #f33, #f99);
 	border: 1px solid #eee;
 	display: table;
 	padding: 0.5em;
@@ -20,3 +44,4 @@ Aicraft View
 		}
 	}
 }
+
