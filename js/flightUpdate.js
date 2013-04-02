@@ -3,5 +3,5 @@ function timeDiff(departTime) {
 }
 
 var id = setInterval(function() {
-	timeDiff(departed)
+	timeDiff(departed);
 }, 5000);
