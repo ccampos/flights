@@ -1,11 +1,12 @@
 /* --------------------------------------------------------------------
-************************* Modify in design.SCSS *************************
+************************* Modify in layout.SCSS *************************
 [Table of contents]
 
 1. Body
 
 2. Mixins
-	[2.1. Linear Gradient / @mixin linearGradient]
+	2.1. Linear Gradient / @mixin linearGradient
+	2.2. Round Corners / @mixin roundCorners
 
 3. Views
 	3.1. Aircraft View / #aircraftView
@@ -22,26 +23,18 @@
 }
 
 /*------------------------------------------------------------------
+[2.2. Round Corners / @mixin roundCorners]
+*/
+@mixin roundCorners($borderRadius) {
+	-webkit-border-radius: $borderRadius;
+	-moz-border-radius: $borderRadius;
+	border-radius: $borderRadius;
+}
+
+/*------------------------------------------------------------------
 [3.1. Aircraft View / #aircraftView]
 */
 #aircraftView {
-	@include linearGradient(0deg, #f33, #f99);
-	border: 1px solid #eee;
-	display: table;
-	padding: 0.5em;
-	.airplane, .details {
-		display: table-cell;
-	}
-	.details {
-		vertical-align: top;
-		li {
-			display: table-row;
-			label, span {
-				display: table-cell;
-				line-height: 1.3em;
-				padding: 0 0.5em;
-			}
-		}
-	}
+	@include linearGradient(0deg, #333, #999);
+	@include roundCorners(10px);
 }
-

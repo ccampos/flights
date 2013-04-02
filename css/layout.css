@@ -1,26 +1,19 @@
 /* --------------------------------------------------------------------
-************************* Modify in design.SCSS *************************
+************************* Modify in layout.SCSS *************************
 [Table of contents]
 
 1. Body
 
 2. Mixins
-	[2.1. Linear Gradient / @mixin linearGradient]
 
 3. Views
 	3.1. Aircraft View / #aircraftView
 
 -------------------------------------------------------------------- */
 /*------------------------------------------------------------------
-[2.1. Linear Gradient / @mixin linearGradient]
-*/
-/*------------------------------------------------------------------
 [3.1. Aircraft View / #aircraftView]
 */
 #aircraftView {
-  background-image: -webkit-linear-gradient(0deg, #ff3333, #ff9999);
-  background-image: -moz-linear-gradient(0deg, #ff3333, #ff9999);
-  background-image: linear-gradient(0deg, #ff3333, #ff9999);
   border: 1px solid #eee;
   display: table;
   padding: 0.5em; }
