@@ -1,24 +1,24 @@
-define(function() {
+define(function () {
 	var aircraftView = Backbone.View.extend({
 		initialize: function() {
 			this.render();
 		},
-		render: function() {
+		render: function () {
 			var variables = {},
 				template;
 
-			for ( var property in this.options ) {
+			for (var property in this.options) {
 				variables[property] = this.options[property];
 			};
 
-			template = _.template( $('#aircraft').html(), variables );
+			template = _.template($('#aircraft').html(), variables);
 
-			this.$el.html( template );
+			this.$el.html(template);
 		},
 		events: {
 			'click button': 'fly'
 		},
-		fly: function( ) {
+		fly: function () {
 			console.log(this.options.jetliner, 'is departing ...');
 		}
 	});

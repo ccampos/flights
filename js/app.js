@@ -7,12 +7,12 @@ define([
 	'views/aircraft',
 	'models/aircraft'
 ], function(Aircraft, Flights, Locations, Routes, Router, AircraftViews, AircraftModels) {
-	var initialize = function(){
+	var initialize = function () {
 		// Pass in our Route module and call it's initialize function
 		Router.initialize();
 	};
 
-	var loadFlightModules = function() {
+	var loadFlightModules = function () {
 		var airplane = Aircraft.aircraft.jetliners.airbus[0],
 			commercialAircraftView;
 

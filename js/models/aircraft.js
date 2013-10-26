@@ -1,4 +1,4 @@
-define(function() {
+define(function () {
 	var aircraftModel = Backbone.Model.extend({
 		defaults: {
 			jetliner: 'Commercial Aircraft',
